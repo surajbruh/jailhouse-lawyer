@@ -2,5 +2,32 @@
 
 @font-face {
   font-family: 'fkscreamer';
-  src: url(..//FKScreamerTrial-Regular-BF6571330a60d38.otf);
+  src: url(..//FKScreamerTrial-Black-BF65713309d368f.otf);
+}
+
+@font-face {
+  font-family: 'grotesk';
+  src: url(..//hk-grotesk.regular.otf);
+}
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  :root {
+    --textNlead: 190px;
+
+    --color1: #F1EADA;
+  }
+
+}
+
+.history span{
+  display: inline-block;
+  font-size: var(--textNlead);
+  line-height: var(--textNlead);
+  text-wrap: nowrap;
 }
