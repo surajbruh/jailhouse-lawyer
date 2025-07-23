@@ -10,7 +10,7 @@ export default function App() {
   const cursorRef = useRef(null)
   const navbarRef = useRef(null)
   const textRef = useRef(null)
-  const tlRef = useRef(null)
+  const wordRef = useRef(null)
   const tempRef = useRef(null)
 
   useGSAP(() => {
@@ -162,6 +162,22 @@ export default function App() {
       })
     }
     pagesAnimation()
+
+    function wordAnimation() {
+      const words = wordRef.current.textContent.split(" ")
+      let clutter = "";
+      words.forEach((word) => {
+        clutter += `<span>${word}</span>`
+      })
+      document.querySelector('.history').innerHTML = clutter;
+
+      gsap.from('.history span', {
+        opacity: 0,
+        scale: 1.5,
+        stagger: 0.25,
+      })
+    }
+    wordAnimation()
   }, [])
   return (
     <>
@@ -236,13 +252,12 @@ export default function App() {
             ref={textRef}
             className="w-full flex px-[48px] pt-[calc(2*(32px+48px))] pb-[48px]">
             <div
-              className="history uppercase font-[fkscreamer] w-max">
-              <span>the history of</span>
-              <br />
-              <span>jailhouse lawyers</span>
+              className="history uppercase font-[fkscreamer] min-w-[67vw] w-clamp(max, 60vw, 80vw) flex flex-wrap">
+              <h1
+                ref={wordRef}>the history of <br />jailhouse lawyers</h1>
             </div>
-            <div className="w-full  flex items-end justify-center">
-              <p className="w-[60%] text-2xl leading-[24px]">
+            <div className="w-full flex items-end">
+              <p className="w-[60%] text-2xl leading-[24px] mx-[48px] my-[24px] ">
                 A brief historical overview of the
                 emergence and impact of jailhouse
                 lawyers in the legal system

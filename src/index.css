@@ -33,10 +33,12 @@ body {
 }
 
 .history span {
+  /* border: 1px solid; */
   display: inline-block;
   font-size: var(--textNlead);
   line-height: var(--textNlead);
-  text-wrap: nowrap;
+  margin-right: 24px;
+  /* text-wrap: nowrap; */
 }
 
 .cursor-wide {
