@@ -26,6 +26,12 @@
 
 }
 
+html,
+body {
+  height: auto;
+  overflow: auto;
+}
+
 .history span {
   display: inline-block;
   font-size: var(--textNlead);
@@ -41,7 +47,7 @@
 .cursor-overlay {
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0);
+  background-color: #00000000;
   position: absolute;
   top: 0;
   right: 0;
