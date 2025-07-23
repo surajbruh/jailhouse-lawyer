@@ -291,7 +291,7 @@ export default function App() {
               </div>
               <div className="images relative flex items-center gap-6">
                 <div className="gif z-10 w-[80px] h-[80px] absolute top-0 left-0 right-0 translate-x-[-45%] translate-y-[-20%]">
-                  <img className="w-full h-full object-cover object-center overflow-visible" src="\img\672cbe9ef2157b7ffb72d4d1_02.gif" alt="" />
+                  <img className="w-full object-cover object-center" src="\img\672cbe9ef2157b7ffb72d4d1_02.gif" alt="" />
                 </div>
                 <div className="image-con overflow-hidden w-[25vh] h-[18vh] ">
                   <img className="image scale-[110%] w-full h-full object-cover" src="\img\66827cb5cad72ab67811a7f0_1.png" alt="" />
